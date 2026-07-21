@@ -80,7 +80,7 @@ Simulando ataque de arranque en frio:
   Temperatura del chip : -20.0 C
   Tiempo de decaimiento: 10.0 s
 Imagen recuperada guardada en 'recuperada.pgm'
-
+```
 ## Interpretación de resultados
 
 La tasa de recuperación indica el porcentaje de bits que permanecen correctos tras la simulación. Los valores obtenidos reproducen las curvas experimentales del artículo de Won et al. (2020):
