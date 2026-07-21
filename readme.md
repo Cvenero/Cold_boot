@@ -16,3 +16,73 @@ Ejecute el siguiente comando en la terminal:
 
 ```bash
 gcc -O2 -Wall -o coldboot_sim coldboot_sim.c -lm
+```
+
+## Ejemplos
+
+### Ejemplo 1: Ataque exitoso a -30 °C durante 5 segundos
+
+```bash
+./coldboot_sim -30 5
+```
+
+**Salida esperada:**
+
+```text
+Imagen sintetica generada y guardada en 'original.pgm'
+Simulando ataque de arranque en frio:
+  Temperatura del chip : -30.0 C
+  Tiempo de decaimiento: 5.0 s
+Imagen recuperada guardada en 'recuperada.pgm'
+
+Resultados:
+  Bits totales   : 524288
+  Bits erroneos  : 300
+  Tasa de recuperacion: 99.943%
+```
+
+### Ejemplo 2: Ataque sin refrigeración (temperatura ambiente a 33.6 °C)
+
+**Comando:**
+
+```bash
+./coldboot_sim 33.6 5
+```
+
+**Salida esperada:**
+
+```text
+Imagen sintetica generada y guardada en 'original.pgm'
+Simulando ataque de arranque en frio:
+  Temperatura del chip : 33.6 C
+  Tiempo de decaimiento: 5.0 s
+Imagen recuperada guardada en 'recuperada.pgm'
+
+Resultados:
+  Bits totales   : 524288
+  Bits erroneos  : 213040
+  Tasa de recuperacion: 59.366%
+```
+
+### Ejemplo 3: Degradación intermedia a -20 °C durante 10 segundos
+
+**Comando:**
+
+```bash
+./coldboot_sim -20 10
+```
+
+**Salida esperada:**
+
+```text
+Imagen sintetica generada y guardada en 'original.pgm'
+Simulando ataque de arranque en frio:
+  Temperatura del chip : -20.0 C
+  Tiempo de decaimiento: 10.0 s
+Imagen recuperada guardada en 'recuperada.pgm'
+
+Resultados:
+  Bits totales   : 524288
+  Bits erroneos  : 77233
+  Tasa de recuperacion: 85.269%
+```
