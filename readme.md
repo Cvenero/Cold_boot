@@ -81,6 +81,18 @@ Simulando ataque de arranque en frio:
   Tiempo de decaimiento: 10.0 s
 Imagen recuperada guardada en 'recuperada.pgm'
 
+## Interpretación de resultados
+
+La tasa de recuperación indica el porcentaje de bits que permanecen correctos tras la simulación. Los valores obtenidos reproducen las curvas experimentales del artículo de Won et al. (2020):
+
+- A temperaturas cercanas a la ambiente (0 °C a 33.6 °C), la recuperación cae rápidamente hasta aproximadamente el 59-60%, mostrando que el ataque no es viable sin refrigeración.
+
+- A -20 °C, la recuperación es superior al 99% durante el primer segundo, pero desciende al 85% a los 10 segundos.
+
+- A -30 °C, la recuperación se mantiene por encima del 99% incluso tras 60 segundos, lo que hace viable el ataque.
+
+Estos resultados validan que el modelo de degradación implementado es coherente con los datos experimentales.
+
 Resultados:
   Bits totales   : 524288
   Bits erroneos  : 77233
